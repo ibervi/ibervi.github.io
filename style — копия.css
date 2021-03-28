@@ -1,0 +1,177 @@
+*,
+::before,
+::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: 'Montserrat', sans-serif;
+}
+
+img {
+  width: 100%;
+  height: 100%;
+}
+
+h1,
+h2,
+h3 {
+  margin: 0;
+}
+
+
+.header {
+  width: 100%;
+  padding: 15px 0;
+  
+  text-align: center;
+  font-size: 24px;
+  font-weight: 300;
+  color: gray;
+}
+
+.header_logo {
+  color: inherit;
+  text-decoration:none;
+  transition: color 0.7s;
+
+}
+
+.header_logo:hover {
+  color: #db4ffe; 
+}
+
+.hero {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  max-width: 1230px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 15px;
+}  
+
+.hero_container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit,minmax(290px, 1fr));
+  grid-gap: 20px;
+}
+
+.hero_about {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.hero_title {
+  margin-bottom: 20px;
+
+  font-size: 48px;
+  line-height: 1.1;
+}
+
+.hero_subtitle {
+  font-size: 32px;
+  font-weight: 400;
+}
+
+.hero_links {
+  display: flex;
+}
+
+.hero_link {
+  margin-right: 10px;
+
+  font-size: 30px;
+  color: #000;
+
+  transition: color 0.3s;
+}
+
+.hero_link:hover {
+  color: #db4ffe; 
+}
+
+.hero_box {
+  max-width: 500px;
+  justify-self: center;
+  overflow:hidden;
+
+  background-image: linear-gradient(-225deg, #69EACB 0%, #EACCF8 48%, #6654F1 100%);
+  border: 10px solid #fff;
+  box-shadow: 2px 5px 10px rgba(0, 0, 0, 0.5);
+
+  animation: ava-animate 5s infinite alternate;
+}
+
+.hero_box-img {
+  animation: ava-bg 3s infinite alternate
+}
+
+@media screen and (max-width: 978px) {
+  .hero {
+    padding-top: 30px;
+  }
+
+  .hero_container {
+    grid-row-gap: 20px;
+  }
+
+  .hero_title {
+    font-size: 28px;
+    margin-bottom: 10px;
+  }
+
+  .hero_subtitle{
+    font-size: 22px;
+    font-weight: 400;
+  }
+
+  .hero_description {
+    font-size: 14px; 
+  }
+
+  .hero_about {
+    text-align: center;
+  }
+
+  .hero_links {
+    justify-content: center;
+  }
+
+  .hero_box {
+    max-width: 35 0px;
+  }
+}
+@keyframes ava-animate {
+  0% {
+    border-radius: 67% 33% 78% 22% / 84% 23% 77% 16% ;
+  }
+
+  40% {
+    border-radius: 23% 77% 20% 80% / 23% 77% 23% 77% ;
+  }
+
+  60% {
+    border-radius: 80% 20% 20% 80% / 23% 12% 88% 77% ;
+  }
+
+  100% {
+    border-radius: 57% 43% 79% 21% / 74% 38% 62% 26% ;
+  }
+}
+
+@keyframes ava-bg {
+  from {
+    backdrop-filter: hue-rotate(0);
+  }
+  
+  to{
+    backdrop-filter: hue-rotate(90deg);
+  }
+}
